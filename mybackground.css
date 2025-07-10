@@ -1,0 +1,17 @@
+body{
+    font-family:'Times New Roman', Times, serif;
+}
+#m1{
+    background-image:url('https://preview.colorlib.com/theme/carries/img/blog/blog_2.jpg');
+    padding:12rem;
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center center;
+    background-attachment:fixed;
+}
+#m1 h1{
+    font-size:3rem;
+}
+#m1 p{
+    font-size:1.5rem;
+}

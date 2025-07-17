@@ -1,0 +1,40 @@
+#block1{
+    list-style-type:none;
+    width:100%;
+    padding:20px;
+    background-color:green;
+}
+#block2{
+    list-style-type:none;
+    width:100%;
+}
+.listleft li{
+    float:left;
+    padding-left:20px;
+}
+
+.more{
+    padding-right:750px;
+}
+.more2{
+    padding-right:650px;
+}
+#block3{
+    background-image:url('https://www.shutterstock.com/image-photo/two-happy-busy-middle-aged-260nw-2479065515.jpg');
+    background-repeat:no-repeat;
+    background-size: cover;
+}
+.more3{
+    padding-top:50px;
+}
+.more4{
+    padding-bottom:20px;
+}
+#box1{
+    background-color: green;
+    padding:20px;
+}
+#box2{
+    background-color:white;
+    padding:20px;
+}

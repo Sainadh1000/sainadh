@@ -1,0 +1,37 @@
+.insta-wrapper {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 0;
+  overflow: hidden;
+}
+
+.insta-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.insta-overlap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.insta-overlap i {
+  color: white;
+  font-size: 5em;
+}
+
+.insta-wrapper:hover .insta-overlap {
+  opacity: 1;
+}

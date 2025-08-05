@@ -1,0 +1,12 @@
+numbers=[1,2,3,4,5]
+print(numbers)
+numbers.insert(1,12)
+print(numbers)
+numbers.append(2)
+print(numbers)
+x=numbers.index(1,0)
+print(x)
+numbers.pop(2)
+print(numbers)
+numbers.remove(5)
+print(numbers)

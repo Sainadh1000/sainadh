@@ -1,0 +1,321 @@
+body{
+    overflow-x: hidden;
+}
+.container{
+  background-image: url('https://preview.colorlib.com/theme/deluxe/images/bg_2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  
+}
+.carier1{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    z-index: 1000;
+    background-image: url('https://preview.colorlib.com/theme/deluxe/images/bg_2.jpg');
+}
+.container ul{
+    display:flex;
+    list-style-type: none;
+    padding: 10px;
+    justify-content: space-evenly;
+    column-gap: 40px;
+    color:white
+}
+.deluxeicon{
+    font-weight:bold ;
+    color: white;
+    padding-top: 30px;
+    padding-right: 20%;
+    padding-left: 18%;
+}
+.carier2{
+    padding-bottom: 5%;
+    padding-top: 10%;
+    line-height: 40px;
+}
+.carier3{
+    display:flex;
+    padding: 20px; 
+    margin:20px;  
+    column-gap: 0.5em;
+    justify-content:center;
+    width:90%;
+}
+.block1{
+   background-color: white;
+    padding: 30px; 
+    margin:20px;  
+    width: 12%;
+    height: 12%;
+}
+.block1 input{
+    padding: 10px;
+    border:none;
+}
+.block2{
+    background-color: white;
+    padding: 20px; 
+    margin:20px;  
+    width: 12%;
+}
+.block2 select{
+    padding: 10px;
+    border:none;
+}
+.block3{
+    background-color: rgb(123,98,51);
+  padding: 20px; 
+  margin: 20px;  
+  width: 12%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.block3:hover{
+    background-color: black;
+}
+.block3 button{
+    width: 100%;
+   height: 100%;
+   background-color: rgb(123, 98, 51);
+   color: white;
+   font-size: 18px;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   text-align: center;
+   transition: background-color 0.3s ease;
+}
+.block3 button:hover {
+  background-color: black;
+  color: white;
+}
+.container1{
+    display: flex;
+    padding-left: 20%;
+    justify-content: space-evenly;
+    column-gap: 7%;
+}
+.block11{
+    position: relativeS;
+    padding-bottom: 56%; 
+    padding-top: 25px;
+    height: 0;
+    background-image: url("https://preview.colorlib.com/theme/deluxe/images/bg_2.jpg");
+}
+.block22{
+    width:40%;
+    display: inline;
+}
+.carier11{
+    width:40%;
+}
+.carier21{
+    width:40%;
+}
+.carier21 i{
+    color:rgb(123,98,51); ;
+}
+.carier21 ul{
+    display:flex;
+    list-style-type: none;
+    padding: 20px; 
+}
+.carier21 li{
+     padding: 10px; 
+}
+.container2{
+     display: flex;
+     padding-top: 50px;
+    padding-left: 10%;
+    justify-content: space-evenly;
+    column-gap: 10px;
+}
+.images {
+    line-height: 1.3;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(246,242,234);
+    border-radius: 50%;
+    text-align: center;
+    margin:25px;
+}
+.container3{
+    display: inline;
+    width:100%;
+}
+.carier31{
+    display:flex;
+    width:100%;
+    padding-left:18%;
+    padding-right:12%;
+    column-gap: 20px;
+}
+.carier31 img {
+  width:100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+.carier31 > div {
+  width: 20%;
+  background-color: whitesmoke;
+  padding: 10px;
+}
+.container4{
+    display: flex;
+    background-color: rgb(141,112,59);
+    width: 100%;
+    padding-left: 20%;
+    column-gap: 2px;
+    text-align: center;
+}
+.container4 div{
+    width:10%;
+    padding: 60px;
+}
+.container5{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(248, 249, 250);
+    padding: 60px 20px;
+}
+.carier51{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.carier51 img{
+    border-radius:50%;
+    width:150px;
+}
+.carier52{
+    text-align: center;
+    display: inline;
+}
+.container6{
+    display: inline;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.carier61{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+}
+.container7{
+    display:flex;
+     flex-wrap: wrap;
+    justify-content: center;
+    gap: 0; 
+}
+.container7 img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+.insta-wrapper {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 0;
+  overflow: hidden;
+}
+
+.insta-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.insta-overlap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* dark transparent overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.insta-overlap i {
+  color: white;
+  font-size: 2em;
+}
+
+.insta-wrapper:hover .insta-overlap {
+  opacity: 1;
+}
+.searchbar {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden; /* prevents the overlay from spilling outside */
+}
+
+.searchbar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.searchlap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;   /* ensure it stays inside */
+  bottom: 0;  /* ensure it stays inside */
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none; /* keeps image interactive */
+}
+.searchlap i {
+  color: white;
+  font-size: 2em;
+}
+.searchbar:hover .searchlap {
+  opacity: 1;
+}
+
+.container8{
+    background-color: black;
+     display: flex;
+    color: white;
+    column-gap: normal;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+.container8 div{
+    width: 20%;
+}
+   
+

@@ -1,0 +1,59 @@
+body{
+    overflow-x: hidden;
+}
+.container{
+  background-image: url('https://preview.colorlib.com/theme/deluxe/images/bg_2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  
+}
+.carier1{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    z-index: 1000;
+    background-image: url('https://preview.colorlib.com/theme/deluxe/images/bg_2.jpg');
+}
+.container ul{
+    display:flex;
+    list-style-type: none;
+    padding: 10px;
+    justify-content: space-evenly;
+    column-gap: 40px;
+    color:white
+}
+.deluxeicon{
+    font-weight:bold ;
+    color: white;
+    padding-top: 30px;
+    padding-right: 20%;
+    padding-left: 18%;
+}
+.container3{
+    display: inline;
+    width:100%;
+}
+.carier31{
+    display:flex;
+    width:100%;
+    padding-left:18%;
+    padding-right:12%;
+    column-gap: 20px;
+}
+.carier31 img {
+  width:100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+.carier31 > div {
+  width: 20%;
+  background-color: whitesmoke;
+  padding: 10px;
+}

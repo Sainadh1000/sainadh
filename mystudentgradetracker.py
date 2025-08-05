@@ -5,7 +5,7 @@ total_score = 0
 num_subjects = 0
 while True:
     try:
-        score = float(input(f"Enter score for subject {num_subjects + 1}: "))
+        score =float(input(f"Enter score for subject {num_subjects + 1}: "))
         total_score += score
         num_subjects += 1
     except ValueError:
@@ -14,7 +14,7 @@ while True:
 
     cont = input("Do you want to enter another score? (Yes/No): ")
     if cont != 'yes':
-        break
+        break 
 if num_subjects > 0:
     average_score = total_score / num_subjects
 else:

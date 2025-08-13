@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up Form</title>
+  <link rel="stylesheet" href="jsforms.css" />
+</head>
+<body>
+  <section class="carier">
+    <div class="container">
+      <h2 style="color:red">Sign Up Form</h2>
+      <form>
+        <input type="text" id="name" class="layout" placeholder="Name" required /><br />
+        <input type="email" id="email" class="layout" placeholder="Email ID" required /><br />
+        <input type="number" id="phoneno" class="layout" placeholder="Phone No" required /><br />
+        <select id="city" class="layout">
+          <option value="">Select</option>
+          <option>Hyderabad</option>
+          <option>Guntur</option>
+          <option>Vijayawada</option>
+          <option>Mumbai</option>
+          <option>Chennai</option>
+          <option>Bangalore</option>
+        </select><br />
+
+        <button type="button" onclick="displayDetails()">Display</button>
+        <button type="button" onclick="clearDetails()">Clear</button>
+      </form>
+    </div>
+
+    <div class="block1">
+      <h1>Name: <span id="displayname"></span></h1>
+      <h1>Phone No: <span id="displayphoneno"></span></h1>
+      <h1>Email ID: <span id="displayemail"></span></h1>
+      <h1>City: <span id="displaycity"></span></h1>
+    </div>
+  </section>
+
+  <script>
+    function displayDetails() {
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var phone = document.getElementById("phoneno").value;
+      var city = document.getElementById("city").value;
+
+      document.getElementById("displayname").innerHTML = name;
+      document.getElementById("displayemail").innerHTML = email;
+      document.getElementById("displayphoneno").innerHTML = phone;
+      document.getElementById("displaycity").innerHTML = city;
+    }
+
+    function clearDetails() {
+      document.getElementById("displayname").innerHTML = '';
+      document.getElementById("displayemail").innerHTML = '';
+      document.getElementById("displayphoneno").innerHTML= '';
+      document.getElementById("displaycity").innerHTML = '';
+    }
+  </script>
+</body>
+</html>

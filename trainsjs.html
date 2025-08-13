@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="trainsjs.css"/>
+</head>
+<body>
+    <section class="container1">
+        <div class="block1">
+            <h1 id="train1name"></h1>
+            <p id="train1runson"></p>
+            <a id="train1default" style="color:blue"></a>
+        </div>
+        <div class="block2">
+            <div style="display: flex; align-items:center; column-gap: 10px;">
+            <h1 id="train1boardingtime"></h1>
+            <p id="train1boardingstation" style="border-left:2px solid black; padding: 2px;"></p>
+            <p id="train1boardingdate" style="border-left:2px solid black; padding: 2px;"></p>
+            </div>
+            <div>
+            <h1 id="train1journey"></h1>
+            </div>
+            <div style="display:flex; align-items:Center; column-gap: 20px;">
+            <h1 id="train1destinationtime"></h1>
+            <p id="train1destination" style="border-left:2px solid black; padding: 2px;"></p>
+            <p id="train1destinationdate" style="border-left:2px solid black; padding: 2px;"></p>
+            </div>
+        </div>
+        <div class="block3">
+            <div>
+                <h1 id="train1coach1"></h1>
+                <p>refresh<i class="fa-solid fa-arrow-rotate-right"></i></p>
+            </div>
+            <div>
+                <h1 id="train1coach2"></h1>
+                <p>refresh<i class="fa-solid fa-arrow-rotate-right"></i></p>
+            </div>
+            <div>
+                <h1 id="train1coach3"></h1>
+                <p>refresh<i class="fa-solid fa-arrow-rotate-right"></i></p>
+            </div>
+            <div>
+                <h1 id="train1coach4"></h1>
+                <p>refresh<i class="fa-solid fa-arrow-rotate-right"></i></p>
+            </div>
+        </div>
+        <div class="block4">
+            <div class="block41">
+                <h1 id="train1book"></h1>
+            </div>
+            <div class="block42">
+                <h1 id="train1others"></h1>
+            </div>
+        </div>
+    </section>
+    </br>
+     <section class="container1">
+        <div class="block1">
+            <h1 id="train2name"></h1>
+            <p id="train2runson"></p>
+            <a id="train2default" style="color:blue"></a>
+        </div>
+        <div class="block2">
+            <div style="display: flex; align-items:center; column-gap: 10px;">
+            <h1 id="train2boardingtime"></h1>
+            <p id="train2boardingstation" style="border-left:2px solid black; padding: 2px;"></p>
+            <p id="train2boardingdate" style="border-left:2px solid black; padding: 2px;"></p>
+            </div>
+            <div>
+            <h1 id="train2journey"></h1>
+            </div>
+            <div style="display:flex; align-items:Center; column-gap: 20px;">
+            <h1 id="train2destinationtime"></h1>
+            <p id="train2destination" style="border-left:2px solid black; padding: 2px;"></p>
+            <p id="train2destinationdate" style="border-left:2px solid black; padding: 2px;"></p>
+            </div>
+        </div>
+        <div class="block3">
+            <div>
+                <h1 id="train2coach1"></h1>
+                <p>refresh<i class="fa-solid fa-arrow-rotate-right"></i></p>
+            </div>
+            <div>
+                <h1 id="train2coach2"></h1>
+                <p>refresh<i class="fa-solid fa-arrow-rotate-right"></i></p>
+            </div>
+            <div>
+                <h1 id="train2coach3"></h1>
+                <p>refresh<i class="fa-solid fa-arrow-rotate-right"></i></p>
+            </div>
+            <div>
+                <h1 id="train2coach4"></h1>
+                <p>refresh<i class="fa-solid fa-arrow-rotate-right"></i></p>
+            </div>
+        </div>
+        <div class="block4">
+            <div class="block41">
+                <h1 id="train2book"></h1>
+            </div>
+            <div class="block42">
+                <h1 id="train2others"></h1>
+            </div>
+        </div>
+    </section>
+    </br>
+     <section class="container1">
+        <div class="block1">
+            <h1 id="train3name"></h1>
+            <p id="train3runson"></p>
+            <a id="train3default" style="color:blue"></a>
+        </div>
+        <div class="block2">
+            <div style="display: flex; align-items:center; column-gap: 10px;">
+            <h1 id="train3boardingtime"></h1>
+            <p id="train3boardingstation" style="border-left:2px solid black; padding: 2px;"></p>
+            <p id="train3boardingdate" style="border-left:2px solid black; padding: 2px;"></p>
+            </div>
+            <div>
+            <h1 id="train3journey"></h1>
+            </div>
+            <div style="display:flex; align-items:Center; column-gap: 20px;">
+            <h1 id="train3destinationtime"></h1>
+            <p id="train3destination" style="border-left:2px solid black; padding: 2px;"></p>
+            <p id="train3destinationdate" style="border-left:2px solid black; padding: 2px;"></p>
+            </div>
+        </div>
+        <div class="block3">
+            <div>
+                <h1 id="train3coach1"></h1>
+                <p>refresh<i class="fa-solid fa-arrow-rotate-right"></i></p>
+            </div>
+            <div>
+                <h1 id="train3coach2"></h1>
+                <p>refresh<i class="fa-solid fa-arrow-rotate-right"></i></p>
+            </div>
+            <div>
+                <h1 id="train3coach3"></h1>
+                <p>refresh<i class="fa-solid fa-arrow-rotate-right"></i></p>
+            </div>
+            <div>
+                <h1 id="train3coach4"></h1>
+                <p>refresh<i class="fa-solid fa-arrow-rotate-right"></i></p>
+            </div>
+        </div>
+        <div class="block4">
+            <div class="block41">
+                <h1 id="train3book"></h1>
+            </div>
+            <div class="block42">
+                <h1 id="train3others"></h1>
+            </div>
+        </div>
+    </section>
+    </br>
+     <section class="container1">
+        <div class="block1">
+            <h1 id="train4name"></h1>
+            <p id="train4runson"></p>
+            <a id="train4default" style="color:blue"></a>
+        </div>
+        <div class="block2">
+            <div style="display: flex; align-items:center; column-gap: 10px;">
+            <h1 id="train4boardingtime"></h1>
+            <p id="train4boardingstation" style="border-left:2px solid black; padding: 2px;"></p>
+            <p id="train4boardingdate" style="border-left:2px solid black; padding: 2px;"></p>
+            </div>
+            <div>
+            <h1 id="train4journey"></h1>
+            </div>
+            <div style="display:flex; align-items:Center; column-gap: 20px;">
+            <h1 id="train4destinationtime"></h1>
+            <p id="train4destination" style="border-left:2px solid black; padding: 2px;"></p>
+            <p id="train4destinationdate" style="border-left:2px solid black; padding: 2px;"></p>
+            </div>
+        </div>
+        <div class="block3">
+            <div>
+                <h1 id="train4coach1"></h1>
+                <p>refresh<i class="fa-solid fa-arrow-rotate-right"></i></p>
+            </div>
+            <div>
+                <h1 id="train4coach2"></h1>
+                <p>refresh<i class="fa-solid fa-arrow-rotate-right"></i></p>
+            </div>
+            <div>
+                <h1 id="train4coach3"></h1>
+                <p>refresh<i class="fa-solid fa-arrow-rotate-right"></i></p>
+            </div>
+            <div>
+                <h1 id="train4coach4"></h1>
+                <p>refresh<i class="fa-solid fa-arrow-rotate-right"></i></p>
+            </div>
+        </div>
+        <div class="block4">
+            <div class="block41">
+                <h1 id="train4book"></h1>
+            </div>
+            <div class="block42">
+                <h1 id="train4others"></h1>
+            </div>
+        </div>
+    </section>
+    </br>
+     <section class="container1">
+        <div class="block1">
+            <h1 id="train5name"></h1>
+            <p id="train5runson"></p>
+            <a id="train5default" style="color:blue"></a>
+        </div>
+        <div class="block2">
+            <div style="display: flex; align-items:center; column-gap: 10px;">
+            <h1 id="train5boardingtime"></h1>
+            <p id="train5boardingstation" style="border-left:2px solid black; padding: 2px;"></p>
+            <p id="train5boardingdate" style="border-left:2px solid black; padding: 2px;"></p>
+            </div>
+            <div>
+            <h1 id="train5journey"></h1>
+            </div>
+            <div style="display:flex; align-items:Center; column-gap: 20px;">
+            <h1 id="train5destinationtime"></h1>
+            <p id="train5destination" style="border-left:2px solid black; padding: 2px;"></p>
+            <p id="train5destinationdate" style="border-left:2px solid black; padding: 2px;"></p>
+            </div>
+        </div>
+        <div class="block3">
+            <div>
+                <h1 id="train5coach1"></h1>
+                <p>refresh<i class="fa-solid fa-arrow-rotate-right"></i></p>
+            </div>
+            <div>
+                <h1 id="train5coach2"></h1>
+                <p>refresh<i class="fa-solid fa-arrow-rotate-right"></i></p>
+            </div>
+            <div>
+                <h1 id="train5coach3"></h1>
+                <p>refresh<i class="fa-solid fa-arrow-rotate-right"></i></p>
+            </div>
+            <div>
+                <h1 id="train5coach4"></h1>
+                <p>refresh<i class="fa-solid fa-arrow-rotate-right"></i></p>
+            </div>
+        </div>
+        <div class="block4">
+            <div class="block41">
+                <h1 id="train5book"></h1>
+            </div>
+            <div class="block42">
+                <h1 id="train5others"></h1>
+            </div>
+        </div>
+    </section>
+<script>
+    var train1={
+        trainName:'TPTY VANDEBHARAT(20701)',
+        runsOn:'MWTFSS',
+        default:'Train Schedule',
+        boardingTime:'06:10',
+        boardingStation:'SECUNDERABAD JN',
+        boardingDate:'Sun, 10 Aug',
+        journeyTime:'03:29',
+        destinationTime:'09:40',
+        destination:'GUNTUR JN',
+        destinationDate:'Sun, 10 Aug',
+        coach:['Sleeper','AC(3A)','AC(2A)','AC(1A)'],
+        book:'Book now',
+        others:'Other Dates'
+    }
+    var train2={
+        trainName:'BZA INTERCITY (12796)',
+        runsOn:'MTWTFSS',
+        default:'Train Schedule',
+        boardingTime:'04:40',
+        boardingStation:'SECUNDERABAD JN',
+        boardingDate:'Sun, 10 Aug',
+        journeyTime:'04:30',
+        destinationTime:'09:10',
+        destination:'GUNTUR JN',
+        destinationDate:'Sun, 10 Aug',
+        coach:['Sleeper','AC(3A)','AC(2A)','AC(1A)'],
+        book:'Book now',
+        others:'Other Dates'
+    }
+    var train3={
+        trainName:'FALAKNUMA SF EX (12704)',
+        runsOn:'MTWTFSS',
+        default:'Train Schedule',
+        boardingTime:'15:55',
+        boardingStation:'SECUNDERABAD JN',
+        boardingDate:'Sun, 10 Aug',
+        journeyTime:'04:34',
+        destinationTime:'20:29',
+        destination:'GUNTUR JN',
+        destinationDate:'Sun, 10 Aug',
+       coach:['Sleeper','AC(3A)','AC(2A)','AC(1A)'],
+        book:'Book now',
+        others:'Other Dates'
+    }
+    var train4={
+        trainName:'CHZ CCT SPL (07448)',
+        runsOn:'S',
+        default:'Train Schedule',
+        boardingTime:'19:30',
+        boardingStation:'CHARALAPALLI',
+        boardingDate:'Sun, 10 Aug',
+        journeyTime:'04:34',
+        destinationTime:'00:05',
+        destination:'GUNTUR JN',
+        destinationDate:'Mon, 11 Aug',
+        coach:['Sleeper','AC(3A)','AC(2A)','AC(1A)'],
+        book:'Book now',
+        others:'Other Dates'
+    }
+    var train5={
+        trainName:'CHENNAI SF EXP (12604)',
+        runsOn:'MTWTFSS',
+        default:'Train Schedule',
+        boardingTime:'17:25',
+        boardingStation:'SECUNDERABAD JN',
+        boardingDate:'Sun, 10 Aug',
+        journeyTime:'04:35',
+        destinationTime:'22:00',
+        destination:'GUNTUR JN',
+        destinationDate:'Sun, 10 Aug',
+        coach:['Sleeper','AC(3A)','AC(2A)','AC(1A)'],
+        book:'Book now',
+        others:'Other Dates'
+    }
+    document.getElementById('train1name').innerHTML=train1.trainName;
+    document.getElementById('train1runson').innerHTML=train1.runsOn;
+    document.getElementById('train1default').innerHTML=train1.default;
+    document.getElementById('train1boardingtime').innerHTML=train1.boardingTime;
+    document.getElementById('train1boardingstation').innerHTML=train1.boardingStation;
+    document.getElementById('train1boardingdate').innerHTML=train1.boardingDate; 
+    document.getElementById('train1journey').innerHTML=train1.journeyTime; 
+    document.getElementById('train1destinationtime').innerHTML=train1.destinationTime;
+    document.getElementById('train1destination').innerHTML=train1.destination;
+    document.getElementById('train1destinationdate').innerHTML=train1.destinationDate;
+    document.getElementById('train1coach1').innerHTML=train1.coach[0];
+    document.getElementById('train1coach2').innerHTML=train1.coach[1];
+    document.getElementById('train1coach3').innerHTML=train1.coach[2];
+    document.getElementById('train1coach4').innerHTML=train1.coach[3];
+    document.getElementById('train1book').innerHTML=train1.book;
+    document.getElementById('train1others').innerHTML=train1.others;
+
+    document.getElementById('train2name').innerHTML=train2.trainName;
+    document.getElementById('train2runson').innerHTML=train2.runsOn;
+    document.getElementById('train2default').innerHTML=train2.default;
+    document.getElementById('train2boardingtime').innerHTML=train2.boardingTime;
+    document.getElementById('train2boardingstation').innerHTML=train2.boardingStation;
+    document.getElementById('train2boardingdate').innerHTML=train2.boardingDate; 
+    document.getElementById('train2journey').innerHTML=train2.journeyTime; 
+    document.getElementById('train2destinationtime').innerHTML=train2.destinationTime;
+    document.getElementById('train2destination').innerHTML=train2.destination;
+    document.getElementById('train2destinationdate').innerHTML=train2.destinationDate;
+    document.getElementById('train2coach1').innerHTML=train2.coach[0];
+    document.getElementById('train2coach2').innerHTML=train2.coach[1];
+    document.getElementById('train2coach3').innerHTML=train2.coach[2];
+    document.getElementById('train2coach4').innerHTML=train2.coach[3];
+    document.getElementById('train2book').innerHTML=train2.book;
+    document.getElementById('train2others').innerHTML=train2.others;
+
+    document.getElementById('train3name').innerHTML=train3.trainName;
+    document.getElementById('train3runson').innerHTML=train3.runsOn;
+    document.getElementById('train3default').innerHTML=train3.default;
+    document.getElementById('train3boardingtime').innerHTML=train3.boardingTime;
+    document.getElementById('train3boardingstation').innerHTML=train3.boardingStation;
+    document.getElementById('train3boardingdate').innerHTML=train3.boardingDate; 
+    document.getElementById('train3journey').innerHTML=train3.journeyTime; 
+    document.getElementById('train3destinationtime').innerHTML=train3.destinationTime;
+    document.getElementById('train3destination').innerHTML=train3.destination;
+    document.getElementById('train3destinationdate').innerHTML=train3.destinationDate;
+    document.getElementById('train3coach1').innerHTML=train3.coach[0];
+    document.getElementById('train3coach2').innerHTML=train3.coach[1];
+    document.getElementById('train3coach3').innerHTML=train3.coach[2];
+    document.getElementById('train3coach4').innerHTML=train3.coach[3];
+    document.getElementById('train3book').innerHTML=train3.book;
+    document.getElementById('train3others').innerHTML=train3.others;
+
+    document.getElementById('train4name').innerHTML=train4.trainName;
+    document.getElementById('train4runson').innerHTML=train4.runsOn;
+    document.getElementById('train4default').innerHTML=train4.default;
+    document.getElementById('train4boardingtime').innerHTML=train4.boardingTime;
+    document.getElementById('train4boardingstation').innerHTML=train4.boardingStation;
+    document.getElementById('train4boardingdate').innerHTML=train4.boardingDate; 
+    document.getElementById('train4journey').innerHTML=train4.journeyTime; 
+    document.getElementById('train4destinationtime').innerHTML=train4.destinationTime;
+    document.getElementById('train4destination').innerHTML=train4.destination;
+    document.getElementById('train4destinationdate').innerHTML=train4.destinationDate;
+    document.getElementById('train4coach1').innerHTML=train4.coach[0];
+    document.getElementById('train4coach2').innerHTML=train4.coach[1];
+    document.getElementById('train4coach3').innerHTML=train4.coach[2];
+    document.getElementById('train4coach4').innerHTML=train4.coach[3];
+    document.getElementById('train4book').innerHTML=train4.book;
+    document.getElementById('train4others').innerHTML=train4.others;
+
+    document.getElementById('train5name').innerHTML=train5.trainName;
+    document.getElementById('train5runson').innerHTML=train5.runsOn;
+    document.getElementById('train5default').innerHTML=train5.default;
+    document.getElementById('train5boardingtime').innerHTML=train5.boardingTime;
+    document.getElementById('train5boardingstation').innerHTML=train5.boardingStation;
+    document.getElementById('train5boardingdate').innerHTML=train5.boardingDate; 
+    document.getElementById('train5journey').innerHTML=train5.journeyTime; 
+    document.getElementById('train5destinationtime').innerHTML=train5.destinationTime;
+    document.getElementById('train5destination').innerHTML=train5.destination;
+    document.getElementById('train5destinationdate').innerHTML=train5.destinationDate;
+    document.getElementById('train5coach1').innerHTML=train5.coach[0];
+    document.getElementById('train5coach2').innerHTML=train5.coach[1];
+    document.getElementById('train5coach3').innerHTML=train5.coach[2];
+    document.getElementById('train5coach4').innerHTML=train5.coach[3];
+    document.getElementById('train5book').innerHTML=train5.book;
+    document.getElementById('train5others').innerHTML=train5.others;
+</script>
+</body>
+</html>

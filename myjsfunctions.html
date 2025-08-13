@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2>Fullname: <span id="fullname"></span></h2>
+​
+    <button onclick="displayFullname()">Display Fullname</button>
+​
+    <button onclick="registerUser()">Register</button>
+​
+    <div>
+        <select id="city" onchange="onChangeCity()">
+            <option>Select</option>
+            <option>Hyderabad</option>
+            <option>Vijayawada</option>
+            <option>Mumbai</option>
+            <option>Karimnagar</option>
+        </select>
+    </div>
+    <h2>Selected City: <span id="selected-city"></span></h2>
+​
+    <script>
+​
+        console.log('In script tag...');
+​
+        function calculateSum(a, b) {
+            console.log(a, b);
+            var sum = a + b;
+            console.log('Sum of two numbers: ', sum);
+        }
+​
+        calculateSum(5, 8);
+​
+        calculateSum(6, 9);
+​
+        calculateSum(3, 1);
+​
+        function subtract(a, b) {
+            var product = a - b;
+            console.log('Product of two numbers', product);
+        }
+​
+        subtract(7, 3);
+​
+        var firstName = 'Adepu';
+​
+        var lastName = 'Mahesh';
+​
+        // Fullname - 'Adepu Mahesh'
+​
+        function getFullName(pFirstName, pLastname) {
+            var fullName = pFirstName + ' ' + pLastname;
+            console.log('Fullname: ', fullName); 
+        }
+​
+        getFullName('Adepu', 'Mahesh');
+​
+        getFullName('Chalmani', 'Rakshitha');
+​
+        getFullName('Santhosh', 'Kumar');
+​
+        function formatLastName() {
+            var formattedLastname = lastName.toUpperCase();
+            console.log(formattedLastname);
+            return formattedLastname;
+        }
+​
+        var lastName = formatLastName();
+​
+        console.log(lastName);
+​
+​
+        function registerUser() {
+            console.log('Registering the user...')
+​
+        }
+​
+        function displayFullname() {
+            var firstName = 'Sai';
+            var lastName = 'Jahnavi';
+            var fullname = firstName + ' ' + lastName;
+            document.getElementById('fullname').innerHTML = fullname;
+        }
+​
+        function onChangeCity() {
+            var city = document.getElementById('city').value;
+​
+            document.getElementById('selected-city').innerHTML = city;
+        }
+​
+    </script>
+</body>
+</html>

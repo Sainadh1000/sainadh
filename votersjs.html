@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<script>
+    var voters=[
+        {
+            vid:1,
+            name:"sai",
+            age:23
+        },
+         {
+            vid:2,
+            name:"mahesh",
+            age:32
+        },
+         {
+            vid:3,
+            name:"teja",
+            age:25
+        },
+         {
+            vid:4,
+            name:"vishnu",
+            age:30
+        },
+         {
+            vid:5,
+            name:"bhanu",
+            age:43
+        },
+         {
+            vid:6,
+            name:"harsha",
+            age:45
+        },
+         {
+            vid:7,
+            name:"rakesh",
+            age:47
+        },
+         {
+            vid:8,
+            name:"manoj",
+            age:48
+        },
+         {
+            vid:9,
+            name:"murali",
+            age:28
+        },
+         {
+            vid:10,
+            name:"nadhu",
+            age:40
+        },
+         {
+            vid:11,
+            name:"naga",
+            age:56
+        },
+         {
+            vid:12,
+            name:"leela",
+            age:32
+        },
+         {
+            vid:13,
+            name:"kiran",
+            age:37
+        },
+         {
+            vid:14,
+            name:"tarak",
+            age:43
+        },
+         {
+            vid:15,
+            name:"ram",
+            age:45
+        }
+    ]
+    var voters_18_35=[];
+    var voters_40=[];
+    for( var i=0;i<15;i++) {
+        if (voters[i].age >=18 && voters[i].age<=35) {
+            voters_18_35.push(voters[i]);
+        }else{
+               voters_40.push(voters[i]);
+        }
+            
+        }
+     console.log(voters_40);
+     console.log(voters_18_35);
+</script>
+</html>

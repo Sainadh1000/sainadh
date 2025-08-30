@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Password Validation</title>
+</head>
+<body>
+  <div>
+    <div>
+      <input type="password" placeholder="Enter password" id="mypassword" />
+      <p id="errormsg" style="color: red;"></p>
+    </div>
+    <div>
+      <button onclick="validatePassword()">Submit</button>
+    </div>
+  </div>
+
+  <script>
+    function validatePassword() {
+      var password = document.getElementById('mypassword').value;
+      var errorMsg = document.getElementById('errormsg');
+
+      if (password.length === 0) {
+        document.getElementById('errormsg').innerHTML='enter password';
+        errorMsg.style.color = 'red';
+        return false;
+      } else if (password.length < 8) {
+        document.getElementById('errormsg').innerHTML = 'Password must contain at least 8 characters.';
+        errorMsg.style.color = 'red';
+        return false;
+      } else if (!/[a-z]/.test(password)) {
+        document.getElementById('errormsg').innerHTML = 'Password must contain at least one lowercase letter.';
+        errorMsg.style.color = 'red';
+        return false;
+      } else if (!/[A-Z]/.test(password)) {
+        document.getElementById('errormsg').innerHTML = 'Password must contain at least one uppercase letter.';
+        errorMsg.style.color = 'red';
+        return false;
+      } else if (!/[0-9]/.test(password)) {
+        document.getElementById('errormsg').innerHTML = 'Password must include at least one digit.';
+        errorMsg.style.color = 'red';
+        return false;
+      } else if (!/[@$!%*?&#^]/.test(password)) {
+        document.getElementById('errormsg').innerHTML = 'Password must include at least one special character.';
+        errorMsg.style.color = 'red';
+        return false;
+      } else {
+        errorMsg.style.color = 'green';
+        document.getElementById('errormsg').innerHTML = 'Password is valid!';
+        return true;
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bus Info</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      padding: 20px;
+      max-width: 800px;
+      margin: 20px auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #fff;
+    }
+    .left {
+      flex: 3;
+    }
+    .right {
+      flex: 1;
+      text-align: right;
+    }
+    .rating {
+      background-color: #007f5f;
+      color: #fff;
+      padding: 5px 10px;
+      border-radius: 8px;
+      display: inline-block;
+      font-weight: bold;
+    }
+    .departure-time {
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .highlight {
+      color: orange;
+    }
+    .button {
+      background-color: #d32f2f;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 20px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .primo {
+      color: #007bff;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+    }
+    .primo span {
+      margin-left: 5px;
+      color: gold;
+    }
+  </style>
+</head>
+<body>
+    <div id="container">
+
+    </div>
+<script>
+ var busData = [
+  {
+    operator: "KSM Roadways",
+    type: "Bharat Benz A/C Sleeper (2+1)",
+    rating: 4.7,
+    ratingCount: 1897,
+    departure: "20:50",
+    arrival: "07:17",
+    duration: "10h 27m",
+    seatsAvailable: 8,
+    singleSeats: 3,
+    price: 1300,
+    startsFrom: "Attibele"
+  },
+  {
+    operator: "VRL Travels",
+    type: "Volvo Multi Axle Sleeper (2+1)",
+    rating: 4.5,
+    ratingCount: 2100,
+    departure: "21:30",
+    arrival: "08:00",
+    duration: "10h 30m",
+    seatsAvailable: 5,
+    singleSeats: 2,
+    price: 1450,
+    startsFrom: "Electronic City"
+  },
+  {
+    operator: "SRS Travels",
+    type: "Scania A/C Sleeper (2+1)",
+    rating: 4.2,
+    ratingCount: 1750,
+    departure: "22:00",
+    arrival: "07:00",
+    duration: "9h 00m",
+    seatsAvailable: 12,
+    singleSeats: 4,
+    price: 1250,
+    startsFrom: "Bommasandra"
+  },
+  {
+    operator: "Orange Travels",
+    type: "Mercedes A/C Sleeper (2+1)",
+    rating: 4.6,
+    ratingCount: 1930,
+    departure: "19:45",
+    arrival: "05:30",
+    duration: "9h 45m",
+    seatsAvailable: 10,
+    singleSeats: 3,
+    price: 1400,
+    startsFrom: "Silk Board"
+  },
+  {
+    operator: "KPN Travels",
+    type: "A/C Sleeper (2+1)",
+    rating: 4.0,
+    ratingCount: 980,
+    departure: "23:00",
+    arrival: "08:15",
+    duration: "9h 15m",
+    seatsAvailable: 6,
+    singleSeats: 2,
+    price: 1200,
+    startsFrom: "Chandapura"
+  },
+  {
+    operator: "Rajdhani Express",
+    type: "Volvo A/C Sleeper (2+1)",
+    rating: 4.3,
+    ratingCount: 1150,
+    departure: "18:00",
+    arrival: "04:00",
+    duration: "10h 00m",
+    seatsAvailable: 7,
+    singleSeats: 2,
+    price: 1350,
+    startsFrom: "Marathahalli"
+  },
+  {
+    operator: "GreenLine Travels",
+    type: "A/C Sleeper (2+1)",
+    rating: 3.9,
+    ratingCount: 870,
+    departure: "22:30",
+    arrival: "07:00",
+    duration: "8h 30m",
+    seatsAvailable: 9,
+    singleSeats: 3,
+    price: 1100,
+    startsFrom: "Silk Board"
+  },
+  {
+    operator: "Dolphin Travels",
+    type: "Volvo A/C Sleeper (2+1)",
+    rating: 4.4,
+    ratingCount: 1560,
+    departure: "20:00",
+    arrival: "06:30",
+    duration: "10h 30m",
+    seatsAvailable: 11,
+    singleSeats: 4,
+    price: 1380,
+    startsFrom: "Attibele"
+  },
+  {
+    operator: "KKR Travels",
+    type: "A/C Sleeper (2+1)",
+    rating: 4.1,
+    ratingCount: 940,
+    departure: "21:15",
+    arrival: "07:00",
+    duration: "9h 45m",
+    seatsAvailable: 10,
+    singleSeats: 2,
+    price: 1180,
+    startsFrom: "Hebbagodi"
+  },
+  {
+    operator: "Sri Renugambal Travels",
+    type: "Bharat Benz A/C Sleeper (2+1)",
+    rating: 4.6,
+    ratingCount: 1700,
+    departure: "20:45",
+    arrival: "06:45",
+    duration: "10h 00m",
+    seatsAvailable: 6,
+    singleSeats: 2,
+    price: 1320,
+    startsFrom: "Electronic City"
+  },
+  {
+    operator: "Sharma Transports",
+    type: "Volvo A/C Multi Axle Sleeper (2+1)",
+    rating: 4.5,
+    ratingCount: 2000,
+    departure: "21:00",
+    arrival: "06:30",
+    duration: "9h 30m",
+    seatsAvailable: 7,
+    singleSeats: 3,
+    price: 1420,
+    startsFrom: "Chandapura"
+  },
+  {
+    operator: "Royal Travels",
+    type: "Scania A/C Sleeper (2+1)",
+    rating: 4.3,
+    ratingCount: 1120,
+    departure: "19:00",
+    arrival: "04:30",
+    duration: "9h 30m",
+    seatsAvailable: 5,
+    singleSeats: 1,
+    price: 1275,
+    startsFrom: "Hosur"
+  },
+  {
+    operator: "Sharma Express",
+    type: "Volvo B9R A/C Sleeper (2+1)",
+    rating: 4.2,
+    ratingCount: 980,
+    departure: "22:15",
+    arrival: "07:15",
+    duration: "9h 00m",
+    seatsAvailable: 8,
+    singleSeats: 3,
+    price: 1190,
+    startsFrom: "Bommasandra"
+  },
+  {
+    operator: "National Travels",
+    type: "A/C Sleeper (2+1)",
+    rating: 4.1,
+    ratingCount: 890,
+    departure: "20:20",
+    arrival: "06:50",
+    duration: "10h 30m",
+    seatsAvailable: 7,
+    singleSeats: 2,
+    price: 1250,
+    startsFrom: "Attibele"
+  },
+  {
+    operator: "Asian Xpress",
+    type: "Mercedes Benz Sleeper (2+1)",
+    rating: 4.4,
+    ratingCount: 1390,
+    departure: "21:45",
+    arrival: "07:15",
+    duration: "9h 30m",
+    seatsAvailable: 9,
+    singleSeats: 3,
+    price: 1390,
+    startsFrom: "Hebbagodi"
+  }
+];
+var busesblock=document.getElementById('container')
+var buses='';
+for(var i=0;i<busData.length;i++){
+buses=buses+`
+<div class="container">
+  <div class="left">
+    <p><strong>${busData[i].operator}</strong><br>
+      ${busData[i].type}
+    </p>
+    <div class="rating">★ ${busData[i].rating}&nbsp; ${busData[i].ratingCount}</div>
+    <p class="departure-time">${busData[i].departure} — ${busData[i].arrival}</p>
+    <p>${busData[i].duration}• <span class="highlight">${busData[i].seatsAvailable} ${busData[i].singleSeats}</span></p>
+  </div>
+  <div class="right">
+    <p><strong>${busData[i].price}</strong><br>Onwards</p>
+    <button class="button">View seats</button>
+  </div>
+</div>
+`
+}
+busesblock.innerHTML=buses;
+</script>
+</body>
+</html>

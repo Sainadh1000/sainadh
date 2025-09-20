@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<script>
+   var groceryItems = [
+  { name: "Coriander Leaves", price: 9, quantity: "100 g", category: "Fresh Vegetables" },
+  { name: "Indian Cucumber", price: 67, quantity: "500 g", category: "Fresh Vegetables" },
+  { name: "Fresh Onion", price: 45, quantity: "900-1000 g", category: "Fresh Vegetables" },
+  { name: "Chilli Green", price: 25, quantity: "100 g", category: "Fresh Vegetables" },
+  { name: "Spinach - Cleaned", price: 36, quantity: "250 g", category: "Fresh Vegetables" },
+  { name: "Beans Haricot", price: 28, quantity: "250 g", category: "Fresh Vegetables" },
+  { name: "Banana Robusta", price: 41, quantity: "4 pcs", category: "Fresh Fruits" },
+  { name: "Banana Elaichi", price: 83, quantity: "500 g", category: "Fresh Fruits" },
+  { name: "Capsicum Green", price: 24, quantity: "2 pcs", category: "Fresh Vegetables" },
+  { name: "Carrot Local", price: 29, quantity: "250 g", category: "Fresh Vegetables" },
+  { name: "Cauliflower", price: 35, quantity: "1 pc", category: "Fresh Vegetables" },
+  { name: "Lady Finger", price: 37, quantity: "500 g", category: "Fresh Vegetables" },
+  { name: "Curry Leaves - Cleaned", price: 11, quantity: "50 g", category: "Herbs & Seasonings" },
+  { name: "Mint Leaves", price: 12, quantity: "100 g", category: "Herbs & Seasonings" },
+  { name: "Papaya", price: 57, quantity: "600 g - 1.2 kg", category: "Fresh Fruits" },
+  { name: "Apple Royal Gala", price: 230, quantity: "4 pcs", category: "Fresh Fruits" },
+  { name: "Coconut", price: 62, quantity: "450 - 550 g", category: "Coconuts & Tender Coconuts" },
+  { name: "Coconut Kalash", price: 46, quantity: "350 - 450 g", category: "Coconuts & Tender Coconuts"},
+  { name: "Guava Thai", price: 47, quantity: "1 pc", category: "Fresh Fruits" },
+  { name: "Mosambi", price: 31, quantity: "500 g", category: "Fresh Fruits" },
+  { name: "Organic Potato", price: 53, quantity: "500 g", category: "Organic & Premium" },
+  { name: "Organic Lady Finger", price: 22, quantity: "250 g", category: "Organic & Premium" },
+  { name: "Watermelon Kiran", price: 95, quantity: "1 pc", category: "Fresh Fruits" },
+  { name: "Baby Orange", price: 131, quantity: "500 g", category: "Fresh Fruits" },
+  { name: "Bel Patra", price: 28, quantity: "25 g", category: "Herbs & Seasonings" },
+  { name: "Ginger", price: 27, quantity: "200 g", category: "Herbs & Seasonings" },
+  { name: "Garlic", price: 39, quantity: "200 g", category: "Herbs & Seasonings" },
+  { name: "Snacky Avocado", price: 89, quantity: "1 pc", category: "Organic & Premium" },
+  { name: "Tender Coconut", price: 99, quantity: "1 pc", category: "Coconuts & Tender Coconuts" }
+];
+var freshVegetables=[];
+var freshFruits=[];
+var coconutsTenderCoconuts=[];
+var organicPremium=[];
+var herbsSeasonings=[];
+
+for( var i=0;i<groceryItems.length;i++) {
+        if (groceryItems[i].category=="Fresh Vegetables") {
+            freshVegetables.push(groceryItems[i]);
+        } 
+        else if(groceryItems[i].category=="Fresh Fruits"){
+               freshFruits.push(groceryItems[i]);
+        }
+        else if(groceryItems[i].category=="Coconuts & Tender Coconuts"){
+               coconutsTenderCoconuts.push(groceryItems[i]);
+        } 
+        else if(groceryItems[i].category=="Organic & Premium"){
+               organicPremium.push(groceryItems[i]);
+        }else{
+           herbsSeasonings .push(groceryItems[i]);
+        } 
+        }
+    console.log(freshVegetables);
+    console.log(freshFruits);
+    console.log(coconutsTenderCoconuts);
+    console.log(organicPremium);
+    console.log(herbsSeasonings);
+</script>
+</html>

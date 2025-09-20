@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+    <script>
+        var products=[
+  {
+    "name": "GOBOULT (previously Boult) RetroAmp Z30 Dual Drivers",
+    "price": 1999,
+    "original_price": 13999,
+    "discountPercent": 85,
+    "rating": 3.4,
+    "reviews": 196,
+    "color": "Vintage Gold, Black",
+    "channel": "Stereo Channel",
+    "date": "2025-08-21"
+  },
+  {
+    "name": "Mivi Fort S24 with Dual Full Range Drivers, 6Hrs Playback",
+    "price": 1699,
+    "original_price": 3999,
+    "discountPercent": 57,
+    "rating": 4.1,
+    "reviews": 86866,
+    "color": "Black",
+    "channel": "2.0 Channel",
+    "date": "2025-08-21"
+  },
+  {
+    "name": "F FERONS Wireless rechargeable brand new portable Premium",
+    "price": 398,
+    "original_price": 1500,
+    "discountPercent": 73,
+    "rating": 3.9,
+    "reviews": 199197,
+    "color": "Black",
+    "channel": "Stereo Channel",
+    "date": "2025-08-21"
+  },
+  {
+    "name": "MZ M406SP (PORTABLE BLUETOOTH SPEAKER) Dynamic Thunder",
+    "price": 300,
+    "original_price": 999,
+    "discountPercent": 69,
+    "rating": 4.0,
+    "reviews": 10826,
+    "color": "Black",
+    "channel": "Stereo Channel",
+    "date": "2025-08-21"
+  },
+  {
+    "name": "boAt Stone 180 Bluetooth Speaker",
+    "price": 1299,
+    "original_price": 2490,
+    "discountPercent": 48,
+    "rating": 4.2,
+    "reviews": 125000,
+    "color": "Charcoal Black",
+    "channel": "Mono",
+    "date": "2025-08-21"
+  },
+  {
+    "name": "JBL Go 3 Portable Bluetooth Speaker",
+    "price": 2999,
+    "original_price": 3999,
+    "discountPercent": 25,
+    "rating": 4.5,
+    "reviews": 215000,
+    "color": "Red",
+    "channel": "Mono",
+    "date": "2025-08-21"
+  },
+  {
+    "name": "Zebronics Zeb-County Bluetooth Speaker",
+    "price": 599,
+    "original_price": 1399,
+    "discountPercent": 57,
+    "rating": 3.8,
+    "reviews": 54890,
+    "color": "Blue",
+    "channel": "Stereo Channel",
+    "date": "2025-08-21"
+  },
+  {
+    "name": "Infinity (JBL) Fuze Pint",
+    "price": 899,
+    "original_price": 1799,
+    "discountPercent": 50,
+    "rating": 4.1,
+    "reviews": 38000,
+    "color": "Black",
+    "channel": "Mono",
+    "date": "2025-08-21"
+  },
+  {
+    "name": "Clavier Atom Portable Bluetooth Speaker",
+    "price": 449,
+    "original_price": 1299,
+    "discountPercent": 65,
+    "rating": 4.0,
+    "reviews": 9800,
+    "color": "Black",
+    "channel": "Mono",
+    "date": "2025-08-21"
+  },
+  {
+    "name": "Realme Pocket Bluetooth Speaker",
+    "price": 1099,
+    "original_price": 1799,
+    "discountPercent": 39,
+    "rating": 4.3,
+    "reviews": 62000,
+    "color": "Classic Black",
+    "channel": "Stereo Channel",
+    "date": "2025-08-21"
+  },
+  {
+    "name": "Portronics SoundDrum POR-871",
+    "price": 1799,
+    "original_price": 3499,
+    "discountPercent": 49,
+    "rating": 4.2,
+    "reviews": 41200,
+    "color": "Grey",
+    "channel": "Stereo Channel",
+    "date": "2025-08-21"
+  },
+  {
+    "name": "Sony SRS-XB13 Wireless Extra Bass Speaker",
+    "price": 3890,
+    "original_price": 4990,
+    "discountPercent": 22,
+    "rating": 4.6,
+    "reviews": 89000,
+    "color": "Blue",
+    "channel": "Mono",
+    "date": "2025-08-21"
+  },
+  {
+    "name": "Noise Vibe 2W Portable Bluetooth Speaker",
+    "price": 699,
+    "original_price": 1499,
+    "discountPercent": 53,
+    "rating": 3.9,
+    "reviews": 26000,
+    "color": "Green",
+    "channel": "Mono",
+    "date": "2025-08-21"
+  },
+  {
+    "name": "Philips BT40 Portable Bluetooth Speaker",
+    "price": 1299,
+    "original_price": 2490,
+    "discountPercent": 48,
+    "rating": 4.0,
+    "reviews": 18000,
+    "color": "Black",
+    "channel": "Mono",
+    "date": "2025-08-21"
+  },
+  {
+    "name": "Mi Outdoor Bluetooth Speaker 5W",
+    "price": 1399,
+    "original_price": 1999,
+    "discountPercent": 30,
+    "rating": 4.2,
+    "reviews": 56000,
+    "color": "Black",
+    "channel": "Mono",
+    "date": "2025-08-21"
+  }
+ 
+   ];
+        var popularity=products.slice().sort(function(a, b){ 
+            return b.rating-a.rating;
+        });
+           var pricelowtohigh=products.slice().sort(function(a, b) {
+            return a.price- b.price;
+        });
+        var pricehightolow=products.slice().sort(function(a, b) {
+            return b.price-a.price;
+        });
+        var newproducts=products.slice().sort(function(a, b) {
+            return new Date(b.date)-new Date(a.date)
+        });
+     
+        console.log(popularity);
+        console.log(pricelowtohigh);
+        console.log(pricehightolow);
+        console.log(newproducts);
+    </script>
+</body>
+</html>

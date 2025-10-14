@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="trafficlights.css"/>
+</head>
+<body>
+    <section>
+        <div class="block" id="block1">
+        </div>
+        <div class="block" id="block2">
+
+        </div>
+        <div class="block" id="block3">
+
+        </div>
+    </section>
+    <script>
+        var choose=2;
+        switch(choose){
+            case 1: {
+                console.log("stop! wait untill the lights turns green");
+                document.getElementById("block1").style.backgroundColor="red";
+                break;
+            }
+            case 2: {
+                console.log("get ready lights will turn green soon.");
+                document.getElementById("block2").style.backgroundColor="yellow";
+                break;
+            }
+            case 3: {
+                console.log("Move! But look for pedestrians");
+                document.getElementById("block3").style.backgroundColor="green";
+                break;
+            }
+            default: {
+                console.log("Invalid signal selected please check value");
+            }
+        }
+    </script>
+</body>
+</html>

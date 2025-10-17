@@ -1,0 +1,14 @@
+.imagediv{
+  position: relative;
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+.imagetxt{
+  color: rgb(30, 243, 30);
+}
+.divbtn{
+  position: relative;
+  bottom: 8px;
+  right: 45px;
+}

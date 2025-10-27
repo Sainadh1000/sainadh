@@ -47,3 +47,4 @@ y_poly2=x_poly2.dot(w_poly2)
 print(y_poly2)
 efficiency_poly2=accuracy(y,y_poly2)*100
 print(efficiency_poly2)
+

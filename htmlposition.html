@@ -1,0 +1,94 @@
+
+<!-- https://hatrabbits.com/wp-content/uploads/2017/01/random.jpg
+https://c8.alamy.com/comp/MR0G79/random-pictures-MR0G79.jpg -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            display: flex;
+            gap:5px;
+            align-items: center;
+            padding: 20px;
+        }
+        .block1{
+            text-align: center;
+            color: aqua;
+            width:45%;
+        }
+        .block1 img{
+            width:450px;
+            position: relative;
+        }
+        .block1 button{
+            position: absolute;
+            top:250px;
+            visibility: hidden;
+            transition: opacity 0.3s ease;
+        }
+        .block1:hover button{
+            visibility: visible;
+        }
+        .ul1{
+            display: flex;
+            column-gap: 40px;
+            align-items: center;
+            color: rgb(102, 15, 233);
+            background-color: azure;
+            list-style: none;  
+            padding: 20px; 
+            position:relative;
+        }
+        .ul2{
+            display: block;
+            position: absolute;
+            visibility: hidden;
+            transition: opacity 0.3s ease;
+            gap: 20px;
+            padding: 30px;
+            background-color: antiquewhite;
+            z-index: 1;
+        }
+        .ul2 li{
+            padding: 3px;
+            color: rgb(51, 12, 210);
+            box-shadow: 5px 5px 10px gray;
+        }
+        .ul1 li:hover .ul2{
+            visibility: visible;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <ul class="ul1">
+            <li>home</li>
+            <li>contacts</li>
+            <li>about</li>
+            <li>more</li>
+            <li>images
+                <ul class="ul2">
+                    <li>image1</li>
+                    <li>image2</li>
+                    <li>image3</li>
+                </ul>
+            </li>
+        </ul> 
+    </div>
+    <section id="container">
+    <div class="block1">
+        <img src="https://hatrabbits.com/wp-content/uploads/2017/01/random.jpg"/>
+        <h2>elphant</h2>
+        <button>click</button>
+    </div>
+    <div class="block1">
+        <img src="https://c8.alamy.com/comp/MR0G79/random-pictures-MR0G79.jpg" />
+        <h2>Cat</h2>
+        <button>click</button>
+    </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="jsmixgrind.css"/>
+</head>
+<body>
+    <section>
+        <div>
+        <img src="" id="product-img" style="width:200px;"/>
+        <h2 id="product-price"></h2>
+        <p id="product-name"></p>
+        <h1 id="product-rating"></h1>
+    </div>
+    <div>
+        <img src="" id="product-img1" style="width:200px;"/>
+        <h2 id="product-price1"></h2>
+        <p id="product-name1"></p>
+        <h1 id="product-rating1"></h1>
+    </div>
+    <div>
+        <img src="" id="product-img2" style="width:200px;"/>
+        <h2 id="product-price2"></h2>
+        <p id="product-name2"></p>
+        <h1 id="product-rating2"></h1>
+    </div>
+    <div>
+        <img src="" id="product-img3" style="width:200px;"/>
+        <h2 id="product-price3"></h2>
+        <p id="product-name3"></p>
+        <h1 id="product-rating3"></h1>
+    </div>
+    <div>
+        <img src="" id="product-img4" style="width:200px;"/>
+        <h2 id="product-price4"></h2>
+        <p id="product-name4"></p>
+        <h1 id="product-rating4"></h1>
+    </div>
+    </section>
+    <script>
+        var rooms=[
+              {
+                image:"https://themewagon.github.io/keto/images/room5.jpg",
+                price:2109,
+                name:"Deluxe Room",
+                rating:4.5
+            },
+             {
+                image:"	https://themewagon.github.io/keto/images/room4.jpg",
+                price:1499,
+                name:"Luxary Room",
+                rating:4.2
+            },
+            {
+                image:"https://themewagon.github.io/keto/images/room3.jpg",
+                price:989,
+                name:"Suite Room",
+                rating:4.5
+            },
+            {
+                image:"	https://themewagon.github.io/keto/images/room2.jpg",
+                price:2499,
+                name:"Private Room",
+                rating:5.0
+            },
+            {
+                image:"https://themewagon.github.io/keto/images/room1.jpg",
+                price:599,
+                name:"Normal Room",
+                rating:4.0
+            }
+        ];
+
+        document.getElementById("product-img").src=rooms[0].image;
+        document.getElementById("product-price").innerHTML=rooms[0].price;
+        document.getElementById("product-name").innerHTML=rooms[0].name;
+        document.getElementById("product-rating").innerHTML=rooms[0].rating;
+
+        document.getElementById("product-img1").src=rooms[1].image;
+        document.getElementById("product-price1").innerHTML=rooms[1].price;
+        document.getElementById("product-name1").innerHTML=rooms[1].name;
+        document.getElementById("product-rating1").innerHTML=rooms[1].rating;
+
+        document.getElementById("product-img2").src=rooms[2].image;
+        document.getElementById("product-price2").innerHTML=rooms[2].price;
+        document.getElementById("product-name2").innerHTML=rooms[2].name;
+        document.getElementById("product-rating2").innerHTML=rooms[2].rating;
+
+        document.getElementById("product-img3").src=rooms[3].image;
+        document.getElementById("product-price3").innerHTML=rooms[3].price;
+        document.getElementById("product-name3").innerHTML=rooms[3].name;
+        document.getElementById("product-rating3").innerHTML=rooms[3].rating;
+
+        document.getElementById("product-img4").src=rooms[4].image;
+        document.getElementById("product-price4").innerHTML=rooms[4].price;
+        document.getElementById("product-name4").innerHTML=rooms[4].name;
+        document.getElementById("product-rating4").innerHTML=rooms[4].rating;
+
+        for(i=0;i<5;i++){
+            console.log(rooms[i].image)
+            console.log(rooms[i].price)
+            console.log(rooms[i].name)
+            console.log(rooms[i].rating)
+        }
+
+    </script>
+</body>
+</html>

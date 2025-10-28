@@ -1,5 +1,5 @@
 while True:
-    student_id_input = input("Enter Student ID: ")
+    student_id_input = input("Enter Student ID: ")#while loop runs until the entered string is digit
     if student_id_input.isdigit():
         student_id = student_id_input
         break

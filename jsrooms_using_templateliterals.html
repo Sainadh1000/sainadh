@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="jsmixgrind.css"/>
+</head>
+<body>
+    <section id="myrooms">
+    </section>
+    <script>
+        var rooms=[
+              {
+                image:"https://themewagon.github.io/keto/images/room5.jpg",
+                price:2109,
+                name:"Deluxe Room",
+                rating:4.5
+            },
+             {
+                image:"	https://themewagon.github.io/keto/images/room4.jpg",
+                price:1499,
+                name:"Luxary Room",
+                rating:4.2
+            },
+            {
+                image:"https://themewagon.github.io/keto/images/room3.jpg",
+                price:989,
+                name:"Suite Room",
+                rating:4.5
+            },
+            {
+                image:"	https://themewagon.github.io/keto/images/room2.jpg",
+                price:2499,
+                name:"Private Room",
+                rating:5.0
+            },
+            {
+                image:"https://themewagon.github.io/keto/images/room1.jpg",
+                price:599,
+                name:"Normal Room",
+                rating:4.0
+            }
+        ];
+        
+        var output=''
+        for(i=0;i<5;i++){
+            output +=
+           `<div>
+              <img src="${rooms[i].image}" id="product-img4" style="width:200px;"/>
+              <h2 id="product-price4">${rooms[i].price}</h2>
+              <p id="product-name4">${rooms[i].name}</p>
+              <h1 id="product-rating4">${rooms[i].rating}</h1>
+           </div>`
+        }
+
+        document.getElementById("myrooms").innerHTML=output;
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!-- Task: Employee Information Display
+🎯 Goal
+
+Create a webpage that:
+
+Takes an employee’s first name, last name, and department as input.
+
+Displays the full name and department when a button is clicked.
+
+Has another button to clear all fields.
+
+Logs each step (like registration, clearing, etc.) to the console. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            width: 20%;
+            gap: 20px;
+        }
+
+        .block1 {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="container">
+        <label>First Name: </label>
+        <input type="text" id="firstName">
+
+        <label>Last Name: </label>
+        <input type="text" id="lastName">
+
+        <label>Department: </label>
+        <select id="department">
+            <option>Select</option>
+            <option>HR</option>
+            <option>Finance</option>
+            <option>Development</option>
+            <option>Sales</option>
+        </select>
+
+
+        <label>City: </label>
+        <select id="city" onchange=changeCity()>
+            <option>Select</option>
+            <option>Haryana</option>
+            <option>Finland</option>
+            <option>Delhi</option>
+            <option>guntur</option>
+        </select>
+
+        <div class="block1">
+            <button onclick=registerEmployees()>register</button>
+            <button onclick=clearEmployees()>Clear</button>
+        </div>
+    </div>
+    <h3>Employee Details:</h3>
+    <p>Full Name: <span id="empFullName"></span></p>
+    <p>Department: <span id="empDept"></span></p>
+    <p>City name:<span id="empCity"></span></p>
+    <script>
+        function registerEmployees() {
+            var firstName = document.getElementById("firstName").value
+            var lastName = document.getElementById("lastName").value
+            var department = document.getElementById("department").value
+            var fullName = firstName + ' ' + lastName
+
+            document.getElementById("empFullName").innerHTML = fullName
+            document.getElementById("empDept").innerHTML = department
+        }
+
+        function clearEmployees() {
+            window.alert("clear employees")
+            document.getElementById("firstName").value = ''
+            document.getElementById("lastName").value = ''
+            document.getElementById("department").value = 'select'
+            document.getElementById("city").value = 'select'
+        }
+
+        function changeCity() {
+            var cityName = document.getElementById("city").value
+            document.getElementById("empCity").innerHTML = cityName
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+<!-- Task: Validate Email and Highlight Selected Section
+🎯 Goal:
+
+Create a web page that:
+
+Lets the user enter their email address.
+
+When they click Validate, show whether the email is valid or invalid.
+
+Has a list of sections like Dashboard, Messages, Settings, Logout — and when one is clicked, it gets highlighted using the .active class (like tabs).
+
+💻 Requirements:
+🟩 HTML
+
+One input box for email (id="email").
+
+One button (onclick="validateEmail()").
+
+A <p> element to show validation message.
+
+A <ul> with 4 <li> items:
+
+Dashboard
+
+Messages
+
+Settings
+
+Logout
+Each <li> should call onSelectSection('dashboard'), etc.
+
+🟦 CSS
+
+Make .active section highlighted using background-color and white text.
+
+Style the list items similar to your previous code. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="14.8.25.css" />
+    <style>
+        .container{
+            width:15%;
+        }
+        ul{
+            width:100px;
+        }
+        li{
+            list-style: none;
+            padding: 10px;
+            border: 1px solid gray;
+        }
+        .active{
+            background-color: aqua;
+            color:white
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <label>Email id</label>
+        <input id="email" type="email" placeholder="enter email-id">
+        <button onclick=checkemail()>validate</button>
+    </div>
+    <p id="statusmessage"></p>
+
+    <ul>
+        <li  id="messages" onclick="tabChange('messages')">messages</li>
+        <li  id="dashboard" onclick="tabChange('dashboard')">dashboard</li>
+        <li id="settings" onclick="tabChange('settings')">settings</li>
+        <li  id="logout" onclick="tabChange('logout')">logout</li>
+    </ul>
+
+    <script>
+        var useremail="sathish@gmail.com";
+        function checkemail(){
+            enteredemail=document.getElementById('email').value;
+            if(useremail!=enteredemail){
+                document.getElementById('statusmessage').innerHTML='Incorrect Email';
+            }
+            else{
+                document.getElementById('statusmessage').innerHTML='Valid Email';
+            }
+        }
+        function tabChange(selectedTab){
+            document.getElementById('messages').classList.remove('active')
+            document.getElementById('dashboard').classList.remove('active')
+            document.getElementById('settings').classList.remove('active')
+            document.getElementById('logout').classList.remove('active')
+
+            if(selectedTab==='messages'){
+               document.getElementById('messages').classList.add('active')
+            } else if(selectedTab==='dashboard'){
+                document.getElementById('dashboard').classList.add('active')
+            }else if(selectedTab==='settings'){
+                document.getElementById('settings').classList.add('active')
+            }else{
+                document.getElementById('logout').classList.add('active')
+            }
+        }
+
+
+    </script>
+</body>
+</html>

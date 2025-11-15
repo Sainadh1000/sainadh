@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Customers</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            width: 100%;
+        }
+
+        .card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .field {
+            margin: 10px 0;
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .delete-container {
+            display: flex;
+            justify-content: flex-end;
+            color: red;
+            column-gap: 15px;
+        }
+
+        .delete-container i {
+            cursor: pointer;
+        }
+
+        .field:last-child {
+            border-bottom: none;
+        }
+
+        .label {
+            font-weight: bold;
+            color: #555;
+            display: block;
+        }
+
+        .value {
+            margin-top: 4px;
+            color: #222;
+        }
+
+        #add-customer-container {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        #add-customer-container button {
+            background-color: rgb(48, 155, 255);
+            border: none;
+            color: white;
+            border-radius: 8px;
+            padding: 7px 12px;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        #orderdetails {
+            background-color: rgb(48, 155, 255);
+            border: none;
+            color: white;
+            border-radius: 8px;
+            padding: 7px 12px;
+            margin: 10px 0 0 0;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        #orderdetails:hover {
+            background-color: rgb(30, 120, 230);
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            display: block;
+        }
+
+        .order-btn {
+            display: block;
+            width: 120px;
+            margin: 10px auto 0;
+            background-color: #309bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .order-btn:hover {
+            background-color: #1e78cc;
+        }
+
+        .order-btn a {
+            text-decoration: none;
+            color: white;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Customers</h1>
+    <div id="add-customer-container">
+        <button><a href="addcustomer.html">Add customers</a></button>
+        <button><a href="orderdetails.html">view orders</a></button>
+    </div>
+    <div class="card-container" id="customers"></div>
+
+    <script>
+        function fetchcustomers() {
+            fetch('http://localhost:4000/customers', {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            }).then(function (response) {
+                return response.json();
+            }).then(function (parsedResponse) {
+                displaycustomers(parsedResponse);
+            }).catch(function (error) {
+                console.error("Fetch Error:", error);
+            });
+        }
+
+        function displaycustomers(customers) {
+            var customersStr = '';
+            for (let i = 0; i < customers.length; i++) {
+                customersStr += `
+                <div class="card">
+                    <div class="field delete-container">
+                        <i class="fa-solid fa-pen-to-square" onclick="editcustomer('${customers[i].id}')"></i>
+                        <i class="fa-solid fa-trash" onclick="deletecustomer('${customers[i].id}')"></i>
+                    </div>
+                    <div class="field">
+                        <span class="label">Name</span>
+                        <span class="value">${customers[i].name}</span>
+                    </div>
+                    <div class="field">
+                        <span class="label">Email</span>
+                        <span class="value">${customers[i].email}</span>
+                    </div>
+                    <div class="field">
+                        <span class="label">Country</span>
+                        <span class="value">${customers[i].country}</span>
+                    </div>
+                    <div>
+                        <button class="order-btn"><a href="createorder.html">order</a></button>
+                    </div>
+                </div>
+                `;
+            }
+            document.getElementById('customers').innerHTML = customersStr;
+        }
+
+        function deletecustomer(id) {
+            fetch('http://localhost:4000/customers/' + id, {
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            }).then(function (response) {
+                return response.json();
+            }).then(function () {
+                document.getElementById('customers').innerHTML = '';
+                fetchcustomers();
+            }).catch(function (error) {
+                console.error("Delete Error:", error);
+            });
+        }
+        function editcustomer(id) {
+            window.location.href = 'editcustomers.html?id=' + id;
+        }
+        fetchcustomers();
+    </script>
+</body>
+
+</html>

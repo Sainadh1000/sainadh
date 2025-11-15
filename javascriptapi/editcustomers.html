@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Edit User</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background-color: #f0f4f8;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .form-container {
+      background: #ffffff;
+      width: 100%;
+      max-width: 450px;
+      border-radius: 14px;
+      padding: 35px 40px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 26px;
+      color: #1a1a1a;
+      margin-bottom: 25px;
+      border-bottom: 2px solid #007bff;
+      padding-bottom: 10px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: #333;
+      font-size: 15px;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 15px;
+      background-color: #fafafa;
+      transition: all 0.2s ease;
+    }
+
+    input:focus {
+      border-color: #007bff;
+      background-color: #fff;
+      outline: none;
+      box-shadow: 0 0 6px rgba(0, 123, 255, 0.2);
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 25px;
+    }
+
+    button {
+      width: 60%;
+      padding: 12px;
+      font-size: 16px;
+      font-weight: 600;
+      color: #ffffff;
+      background-color: #007bff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+      transform: scale(1.03);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="form-container">
+    <h1>Edit Customer Details</h1>
+
+    <div class="form-group">
+      <label for="id">ID</label>
+      <input type="number" id="id" placeholder="Enter user ID" />
+    </div>
+
+    <div class="form-group">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" placeholder="Enter full name" />
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email Address</label>
+      <input type="email" id="email" placeholder="Enter email address" />
+    </div>
+
+    <div class="form-group">
+      <label for="country">Country</label>
+      <input type="text" id="country" placeholder="Enter country" />
+    </div>
+
+    <div class="button-container">
+      <button onclick="editcustomer()">Update Customer</button>
+    </div>
+  </div>
+
+    <script>
+        var urlParams = new URLSearchParams(window.location.search);
+        const id = urlParams.get('id');
+        fetch('http://localhost:4000/customers/' + id, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        }).then(function (response) {
+            return response.json();
+        }).then(function (parsedResponse) {
+            document.getElementById('id').value = parsedResponse.id;
+            document.getElementById('name').value = parsedResponse.name;
+            document.getElementById('email').value = parsedResponse.email;
+            document.getElementById('country').value = parsedResponse.country;
+        }).catch(function (error) {
+        });
+        
+        function editcustomer() {
+            var customerinfo = {
+                id: document.getElementById('id').value,
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                country: document.getElementById('country').value
+            };
+            fetch('http://localhost:4000/customers/' + id, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(customerinfo)
+            }).then(function (response) {
+                return response.json();
+            }).then(function (parsedResponse) {
+                alert('Updated user successfully');
+                window.location.href = 'customersorder.html';
+            }).catch(function (error) {
+            });
+        }
+    </script>
+</body>
+
+</html>

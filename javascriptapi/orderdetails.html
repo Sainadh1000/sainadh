@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Customer Orders</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f9;
+      margin: 0;
+      padding: 20px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .input-group {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    input[type="text"] {
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      flex: 1;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 6px;
+      border: none;
+      background-color: #309BFF;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #267ACC;
+    }
+
+    .orders-container {
+      margin-top: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 15px 20px;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      margin-bottom: 15px;
+    }
+
+    .field {
+      margin-bottom: 8px;
+    }
+
+    .label {
+      font-weight: bold;
+      color: #555;
+    }
+
+    .value {
+      margin-left: 8px;
+      color: #222;
+    }
+
+    .message {
+      text-align: center;
+      font-weight: bold;
+      margin-top: 20px;
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h1>Get Orders by Customer ID</h1>
+
+  <div class="input-group">
+    <input type="text" id="customerId" placeholder="Enter Customer ID" />
+    <button onclick="ordersbycustomer()">Fetch Orders</button>
+  </div>
+
+  <div class="orders-container" id="ordersContainer"></div>
+  <div class="message" id="message"></div>
+
+  <script>
+    function ordersbycustomer() {
+      const customerId = document.getElementById('customerId').value;
+
+      if (!customerId) {
+        showMessage('Please enter a customer ID');
+        return;
+      }
+      document.getElementById('ordersContainer').innerHTML = '';
+      document.getElementById('message').textContent = '';
+
+      fetchOrdersByCustomerId(customerId);
+    }
+
+    function fetchOrdersByCustomerId(customerId) {
+    fetch('http://localhost:4000/orders', {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  })
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(parsedResponse) {
+    const filteredOrders = parsedResponse.filter(order => 
+      String(order.customerId) === String(customerId)
+    );
+
+    if (filteredOrders.length === 0) {
+      showMessage('No orders found for this customer.');
+      return;
+    }
+
+    displayOrders(filteredOrders);
+  })
+  .catch(function(error) {
+  });
+}
+
+    function displayOrders(orders) {
+     const container = document.getElementById('ordersContainer');
+      let customerorders = '';
+
+     for (let i = 0; i < orders.length; i++) {
+     const order = orders[i];
+     const formattedDate = new Date(order.orderDate).toLocaleDateString();
+
+     customerorders += `
+      <div class="card">
+         <div class="field"><span class="label">customerid:</span><span class="value">${order.customerId}</span></div>
+        <div class="field"><span class="label">Product:</span><span class="value">${order.product}</span></div>
+        <div class="field"><span class="label">Quantity:</span><span class="value">${order.quantity}</span></div>
+        <div class="field"><span class="label">Price:</span><span class="value">$${order.price}</span></div>
+        <div class="field"><span class="label">Order Date:</span><span class="value">${formattedDate}</span></div>
+      </div>
+    `;
+  }
+
+     container.innerHTML = customerorders;
+      }
+
+    function showMessage(msg) {
+      document.getElementById('message').textContent = msg;
+    }
+  </script>
+</body>
+</html>
